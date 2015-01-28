@@ -21,6 +21,7 @@
 		4FCC9F391A7862B900AEED5F /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC9F351A7862B900AEED5F /* 4.png */; };
 		4FCC9F3D1A7865E000AEED5F /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC9F3B1A7865E000AEED5F /* 2.png */; };
 		4FCC9F3E1A7865E000AEED5F /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC9F3C1A7865E000AEED5F /* 3.png */; };
+		4FCC9F411A7866C900AEED5F /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F401A7866C900AEED5F /* PersonDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		4FCC9F351A7862B900AEED5F /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		4FCC9F3B1A7865E000AEED5F /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		4FCC9F3C1A7865E000AEED5F /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		4FCC9F3F1A7866C900AEED5F /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
+		4FCC9F401A7866C900AEED5F /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				4FCC9F2D1A7861C600AEED5F /* PersonListTableViewController.m */,
 				4FCC9F2F1A7861D800AEED5F /* PersonListTableViewDataSource.h */,
 				4FCC9F301A7861D800AEED5F /* PersonListTableViewDataSource.m */,
+				4FCC9F3F1A7866C900AEED5F /* PersonDetailViewController.h */,
+				4FCC9F401A7866C900AEED5F /* PersonDetailViewController.m */,
 				4FCC9F261A78619300AEED5F /* Person.h */,
 				4FCC9F271A78619300AEED5F /* Person.m */,
 				4FCC9F281A78619300AEED5F /* PersonController.h */,
@@ -260,6 +265,7 @@
 			files = (
 				4FCC9F311A7861D800AEED5F /* PersonListTableViewDataSource.m in Sources */,
 				4FCC9F001A785EDD00AEED5F /* AppDelegate.m in Sources */,
+				4FCC9F411A7866C900AEED5F /* PersonDetailViewController.m in Sources */,
 				4FCC9F2E1A7861C600AEED5F /* PersonListTableViewController.m in Sources */,
 				4FCC9F2B1A78619300AEED5F /* PersonController.m in Sources */,
 				4FCC9F2A1A78619300AEED5F /* Person.m in Sources */,

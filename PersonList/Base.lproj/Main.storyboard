@@ -18,6 +18,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BMh-KY-ngi" id="VHJ-jk-00j">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="unM-WX-e75" kind="show" id="e3y-U5-5JI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +36,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQS-zK-XJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="xa7-a4-ZDb" customClass="PersonListTableViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="566"/>
+            <point key="canvasLocation" x="889" y="566"/>
+        </scene>
+        <!--Person Detail View Controller-->
+        <scene sceneID="I9B-U8-ciW">
+            <objects>
+                <viewController id="unM-WX-e75" customClass="PersonDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6HV-Wd-Wxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="lIj-Kc-sNB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="upu-d5-vXM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-VJ-mPC">
+                                <rect key="frame" x="16" y="72" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-nn-SPI">
+                                <rect key="frame" x="16" y="180" width="306" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvf-gP-Dph">
+                                <rect key="frame" x="16" y="221" width="306" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c6-2j-4Sq">
+                                <rect key="frame" x="16" y="268" width="306" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="r6w-VJ-mPC" id="oni-bl-dKC"/>
+                        <outlet property="jobLabel" destination="8c6-2j-4Sq" id="fyy-ar-vQe"/>
+                        <outlet property="nameLabel" destination="Tmo-nn-SPI" id="cCe-yM-ROe"/>
+                        <outlet property="phoneLabel" destination="wvf-gP-Dph" id="ky9-jj-khx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6H-AH-2Ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1699" y="566"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aT9-58-hyU">

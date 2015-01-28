@@ -8,6 +8,7 @@
 
 #import "PersonListTableViewDataSource.h"
 #import "PersonController.h"
+#import "PersonTableViewCell.h"
 
 @implementation PersonListTableViewDataSource
 
@@ -25,11 +26,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [UITableViewCell new];
-    
+    PersonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personTableViewCell" forIndexPath:indexPath];
     Person *person = [PersonController sharedInstance].personList[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:person.imageName];
-    cell.textLabel.text = person.name;
+    [cell updateWithPerson:person];
     
     return cell;
 }

@@ -23,9 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.dataSource = [PersonListTableViewDataSource new];
-//    self.tableView.dataSource = self.dataSource;
-
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -1,37 +1,35 @@
 //
-//  PersonDetailViewController.m
+//  PersonTableViewCell.m
 //  PersonList
 //
 //  Created by Joshua Howland on 1/27/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "PersonDetailViewController.h"
+#import "PersonTableViewCell.h"
 
-@interface PersonDetailViewController ()
+@interface PersonTableViewCell ()
 
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIImageView *avatarImageView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *phoneLabel;
 @property (nonatomic, strong) IBOutlet UILabel *jobLabel;
 
 @end
 
-@implementation PersonDetailViewController
+@implementation PersonTableViewCell
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)awakeFromNib {
+    // Initialization code
 }
 
 - (void)updateWithPerson:(Person *)person {
     
-    self.imageView.image = [UIImage imageNamed:person.imageName];
+    self.avatarImageView.image = [UIImage imageNamed:person.imageName];
     self.nameLabel.text = person.name;
     self.phoneLabel.text = person.phoneNumber;
     self.jobLabel.text = person.job;
     
 }
-
 
 @end

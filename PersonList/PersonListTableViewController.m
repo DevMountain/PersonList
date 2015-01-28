@@ -29,7 +29,7 @@
     if([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
 
-        PersonDetailViewController *destinationController = [segue destinationViewController];
+        PersonDetailViewController *destinationController = segue.destinationViewController;
         [destinationController updateWithPerson:[PersonController sharedInstance].personList[indexPath.row]];
     }
 }

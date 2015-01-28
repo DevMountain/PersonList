@@ -15,22 +15,34 @@
 @property (nonatomic, strong) IBOutlet UILabel *phoneLabel;
 @property (nonatomic, strong) IBOutlet UILabel *jobLabel;
 
+@property (nonatomic, strong) Person *person;
+
 @end
 
 @implementation PersonDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self updateDetails];
+
 }
 
 - (void)updateWithPerson:(Person *)person {
     
-    self.imageView.image = [UIImage imageNamed:person.imageName];
-    self.nameLabel.text = person.name;
-    self.phoneLabel.text = person.phoneNumber;
-    self.jobLabel.text = person.job;
+    self.person = person;
     
+    [self updateDetails];
+    
+}
+
+- (void)updateDetails {
+
+    self.imageView.image = [UIImage imageNamed:self.person.imageName];
+    self.nameLabel.text = self.person.name;
+    self.phoneLabel.text = self.person.phoneNumber;
+    self.jobLabel.text = self.person.job;
+
 }
 
 

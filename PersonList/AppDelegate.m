@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "PersonController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // NOTE: FOR DEBUGGIN ONLY
+    if ([PersonController sharedInstance].personList.count == 0) {
+        for (NSDictionary *personDictionary in [Person allTheFakePeople]) {
+            [[PersonController sharedInstance] addPerson:[[Person alloc] initWithDictionary:personDictionary]];
+        }
+    }
+    
     return YES;
 }
 

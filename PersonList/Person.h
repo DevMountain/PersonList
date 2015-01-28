@@ -18,4 +18,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)personDictionary;
 
+// For testing only
++ (NSArray *)allTheFakePeople;
+
 @end

@@ -50,4 +50,26 @@ static NSString * const jobKey = @"job";
     return self.name;
 }
 
++ (NSArray *)allTheFakePeople {
+    
+    return @[
+             @{imageNameKey: @"1",
+               nameKey: @"Some Dude",
+               phoneNumberKey: @"888-888-8888",
+               jobKey: @"Garbage Collection"},
+             @{imageNameKey: @"2",
+               nameKey: @"Chris Sacca",
+               phoneNumberKey: @"920-558-1033",
+               jobKey: @"Venture Capitalist"},
+             @{imageNameKey: @"3",
+               nameKey: @"The Real Programmer",
+               phoneNumberKey: @"444-444-4444",
+               jobKey: @"iOS Development"},
+             @{imageNameKey: @"4",
+               nameKey: @"Your Mom",
+               phoneNumberKey: @"556-243-1089",
+               jobKey: @"Web Development"},
+             ];
+}
+
 @end

@@ -18,5 +18,4 @@
 - (void)addPerson:(Person *)person;
 - (void)removePerson:(Person *)person;
 
-
 @end

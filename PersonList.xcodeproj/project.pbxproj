@@ -14,6 +14,10 @@
 		4FCC9F081A785EDD00AEED5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC9F071A785EDD00AEED5F /* Images.xcassets */; };
 		4FCC9F0B1A785EDD00AEED5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC9F091A785EDD00AEED5F /* LaunchScreen.xib */; };
 		4FCC9F171A785EDD00AEED5F /* PersonListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F161A785EDD00AEED5F /* PersonListTests.m */; };
+		4FCC9F2A1A78619300AEED5F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F271A78619300AEED5F /* Person.m */; };
+		4FCC9F2B1A78619300AEED5F /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F291A78619300AEED5F /* PersonController.m */; };
+		4FCC9F2E1A7861C600AEED5F /* PersonListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F2D1A7861C600AEED5F /* PersonListTableViewController.m */; };
+		4FCC9F311A7861D800AEED5F /* PersonListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC9F301A7861D800AEED5F /* PersonListTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		4FCC9F101A785EDD00AEED5F /* PersonListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCC9F151A785EDD00AEED5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FCC9F161A785EDD00AEED5F /* PersonListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonListTests.m; sourceTree = "<group>"; };
+		4FCC9F261A78619300AEED5F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4FCC9F271A78619300AEED5F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4FCC9F281A78619300AEED5F /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = "<group>"; };
+		4FCC9F291A78619300AEED5F /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = "<group>"; };
+		4FCC9F2C1A7861C600AEED5F /* PersonListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListTableViewController.h; sourceTree = "<group>"; };
+		4FCC9F2D1A7861C600AEED5F /* PersonListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListTableViewController.m; sourceTree = "<group>"; };
+		4FCC9F2F1A7861D800AEED5F /* PersonListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonListTableViewDataSource.h; sourceTree = "<group>"; };
+		4FCC9F301A7861D800AEED5F /* PersonListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonListTableViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +95,16 @@
 			children = (
 				4FCC9EFE1A785EDD00AEED5F /* AppDelegate.h */,
 				4FCC9EFF1A785EDD00AEED5F /* AppDelegate.m */,
+				4FCC9F2C1A7861C600AEED5F /* PersonListTableViewController.h */,
+				4FCC9F2D1A7861C600AEED5F /* PersonListTableViewController.m */,
+				4FCC9F2F1A7861D800AEED5F /* PersonListTableViewDataSource.h */,
+				4FCC9F301A7861D800AEED5F /* PersonListTableViewDataSource.m */,
 				4FCC9F011A785EDD00AEED5F /* ViewController.h */,
 				4FCC9F021A785EDD00AEED5F /* ViewController.m */,
+				4FCC9F261A78619300AEED5F /* Person.h */,
+				4FCC9F271A78619300AEED5F /* Person.m */,
+				4FCC9F281A78619300AEED5F /* PersonController.h */,
+				4FCC9F291A78619300AEED5F /* PersonController.m */,
 				4FCC9F041A785EDD00AEED5F /* Main.storyboard */,
 				4FCC9F071A785EDD00AEED5F /* Images.xcassets */,
 				4FCC9F091A785EDD00AEED5F /* LaunchScreen.xib */,
@@ -220,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCC9F031A785EDD00AEED5F /* ViewController.m in Sources */,
+				4FCC9F311A7861D800AEED5F /* PersonListTableViewDataSource.m in Sources */,
 				4FCC9F001A785EDD00AEED5F /* AppDelegate.m in Sources */,
+				4FCC9F2E1A7861C600AEED5F /* PersonListTableViewController.m in Sources */,
+				4FCC9F2B1A78619300AEED5F /* PersonController.m in Sources */,
+				4FCC9F2A1A78619300AEED5F /* Person.m in Sources */,
 				4FCC9EFD1A785EDD00AEED5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

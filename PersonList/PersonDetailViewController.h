@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Person.h"
+
+@class Person;
 
 @interface PersonDetailViewController : UIViewController
 
-- (void)updateWithPerson:(Person *)person;
+@property (nonatomic, weak) Person *person;
 
 @end

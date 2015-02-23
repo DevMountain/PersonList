@@ -33,7 +33,7 @@
         NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
 
         PersonDetailViewController *destinationController = [segue destinationViewController];
-        [destinationController updateWithPerson:[PersonController sharedInstance].personList[indexPath.row]];
+		destinationController.person = [PersonController sharedInstance].personList[indexPath.row];
     }
 }
 

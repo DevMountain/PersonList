@@ -7,6 +7,7 @@
 //
 
 #import "PersonDetailViewController.h"
+#import "Person.h"
 
 @interface PersonDetailViewController ()
 
@@ -21,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	
+	[self updateWithPerson:self.person];
 }
 
 - (void)updateWithPerson:(Person *)person {
@@ -31,5 +33,10 @@
     self.jobLabel.text = person.job;
 }
 
+- (void)setPerson:(Person *)person
+{
+	_person = person;
+	[self updateWithPerson:person];
+}
 
 @end

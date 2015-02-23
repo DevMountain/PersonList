@@ -25,8 +25,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [UITableViewCell new];
-    
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonListCell" forIndexPath:indexPath];
+	
     Person *person = [PersonController sharedInstance].personList[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:person.imageName];
     cell.textLabel.text = person.name;

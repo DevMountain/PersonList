@@ -10,6 +10,7 @@
 
 @interface PersonTableViewCell ()
 
+// Properties all wired up to storyboard prototype cell
 @property (nonatomic, strong) IBOutlet UIImageView *avatarImageView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *phoneLabel;
@@ -23,6 +24,7 @@
     // Initialization code
 }
 
+// Configures cell labels/image from the Person object's properties
 - (void)updateWithPerson:(Person *)person {
     
     self.avatarImageView.image = [UIImage imageNamed:person.imageName];

@@ -29,9 +29,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+   
+    // Check to see if selection is UITableViewCell
     if([sender isKindOfClass:[UITableViewCell class]]) {
-        NSIndexPath * indexPath = [self.tableView indexPathForCell:sender];
 
+        // Obtain indexPath from sender
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+
+        // Instantiate viewController for segue destination
         PersonDetailViewController *destinationController = [segue destinationViewController];
 		destinationController.person = [PersonController sharedInstance].personList[indexPath.row];
     }

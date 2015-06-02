@@ -26,6 +26,7 @@ static NSString * const jobKey = @"job";
     return self;
 }
 
+// Helper method that creates dictionary representation of a Person object in order to be stored to NSUserDefaults
 - (NSDictionary *)personDictionary {
     
     NSMutableDictionary *entryDictionary = [NSMutableDictionary new];
@@ -42,8 +43,7 @@ static NSString * const jobKey = @"job";
         [entryDictionary setObject:self.job forKey:jobKey];
     }
     
-    return entryDictionary;
-    
+    return entryDictionary;    
 }
 
 - (NSString *)description {

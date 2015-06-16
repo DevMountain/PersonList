@@ -29,38 +29,42 @@ static NSString * const personListKey = @"personList";
     return sharedInstance;
 }
 
+// Adds Person to personList array
 - (void)addPerson:(Person *)person {
     
     if (!person) {
         return;
     }
     
+    // Creates temporary mutable array to add person
     NSMutableArray *mutablePersonList = [[NSMutableArray alloc] initWithArray:self.personList];
     [mutablePersonList addObject:person];
     
     self.personList = mutablePersonList;
 }
 
+// Removes Person to personList array
 - (void)removePerson:(Person *)person {
     
     if (!person) {
         return;
     }
     
+    // Creates temporary mutable array to remove person
     NSMutableArray *mutablePersonList = self.personList.mutableCopy;
     [mutablePersonList removeObject:person];
     
     self.personList = mutablePersonList;
-    
 }
 
-
+// Returns array of all Person objects stored in NSUserDefaults
 + (NSMutableArray *)loadPersonListFromDefaults {
     
     NSArray *personDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:personListKey];
     
     NSMutableArray *personList = [NSMutableArray new];
     
+    // Loops through array of dictionaries in defaults, converts each to Person object
     for (NSDictionary *personDictionary in personDictionaries) {
         Person *person = [[Person alloc] initWithDictionary:personDictionary];
         [personList addObject:person];
@@ -69,18 +73,18 @@ static NSString * const personListKey = @"personList";
     return personList;
 }
 
+// Stores array of all Person objects to NSUserDefaults
 + (void)storePersonListInDefaults:(NSArray *)personList {
     
     NSMutableArray *personDictionaries = [NSMutableArray new];
     
+    // Loops through array of Person objects, adds dictionary representation of each Person to array
     for (Person *person in personList) {
         [personDictionaries addObject:[person personDictionary]];
     }
     
-    
     [[NSUserDefaults standardUserDefaults] setObject:personDictionaries forKey:personListKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-
 
 @end

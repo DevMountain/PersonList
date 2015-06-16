@@ -26,8 +26,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    // *Ensure cell prototype in storyboard contains same cellIdentifier as the one used for dequeue
     PersonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"personTableViewCell" forIndexPath:indexPath];
     Person *person = [PersonController sharedInstance].personList[indexPath.row];
+
     [cell updateWithPerson:person];
     
     return cell;

@@ -15,4 +15,7 @@
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *job;
 
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)personDictionary;
+
 @end

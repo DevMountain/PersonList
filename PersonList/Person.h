@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Person : NSObject
+@interface Person : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *imageName;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *job;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-- (NSDictionary *)personDictionary;
+// For testing only
++ (NSArray *)allTheFakePeople;
 
 @end
